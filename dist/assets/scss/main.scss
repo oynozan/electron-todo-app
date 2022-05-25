@@ -1,0 +1,93 @@
+@import 'fonts.scss';
+@import 'scrollbar.scss';
+
+body {
+    margin:0;
+    padding:0;
+    height:100vh;
+    overflow:hidden !important;
+}
+
+button {
+    background: none;
+    border: none;
+    color: white;
+}
+
+input:focus, button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.no-item-text {
+    display: block;
+    text-align: center;
+    color:rgb(220, 220, 220);
+    font-family: "Akshar", sans-serif;
+    font-size:25px;
+    margin-top:50px;
+}
+
+.items {
+    padding:20px;
+    max-height: calc(100vh - 120px);
+    overflow: auto;
+
+    .item {
+        position: relative;
+        width:calc(100% - 20px * 2);
+        color:white;
+        font-size:26px;
+        font-family:"Akshar", sans-serif;
+        padding:15px 30px 15px 5px;
+        border-radius: 7px;
+        background-color:#e1009d;
+        margin-bottom:10px;
+        word-break: break-all;
+        cursor: pointer;
+
+        .delete-item {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        &.completed {
+            text-decoration: line-through;
+            color: #fbb6e2;
+        }
+    }
+}
+
+.add-item {
+    position:absolute;
+    bottom: 0;
+    width: calc(100% - 40px);
+    padding:20px;
+
+    input {
+        display: inline-block;
+        vertical-align: middle;
+        width:calc(100% - 55px);
+        background:none;
+        border:none;
+        border-bottom: 1px solid #e1009d;
+        color:white;
+        font-size:23px;
+        font-family:"Akshar", sans-serif;
+    }
+
+    button {
+        vertical-align: middle;
+        display: inline-block;
+        width:40px;
+        cursor: pointer;
+
+        img {
+            width:30px;
+        }
+    }
+}

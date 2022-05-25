@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TO-DO App</title>
+        <link rel="stylesheet" href="assets/css/main.css">
+        <script>
+            const electron = require('electron');
+            const {ipcRenderer} = electron;
+        </script>
+    </head>
+    <body>
+
+        <p class="no-item-text">Welcome to TO-DO App<br>Please add something</p>
+
+        <div class="items"></div>
+        
+        <div class="add-item">
+            <input id="item-input" autofocus>
+            <button id="add-item-button">
+                <img src="images/plus-circle.svg">
+            </button>
+        </div>
+
+        <script src="assets/js/general.js"></script>
+        <script src="assets/js/deleteItem.js"></script>
+        <script src="assets/js/makeItemCompleted.js"></script>
+        <script src="assets/js/existingValues.js"></script>
+        <script src="assets/js/closing.js"></script>
+    </body>
+</html>
